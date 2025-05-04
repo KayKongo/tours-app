@@ -42,17 +42,19 @@ const App = () => {
       {loading ? (
         <Loading />
       ) : tours.length === 0 ? (
-        <div className="title">
-          <h2>No tours left</h2>
-          <button
-            type="button"
-            style={{ marginTop: "2rem" }}
-            className="btn"
-            onClick={() => fetchTours()}
-          >
-            Refetch tours
-          </button>
-        </div>
+        <main>
+          <div className="title">
+            <h2>No tours left</h2>
+            <button
+              type="button"
+              style={{ marginTop: "2rem" }}
+              className="btn"
+              onClick={() => fetchTours()}
+            >
+              Refetch tours
+            </button>
+          </div>
+        </main>
       ) : (
         <Tours tours={tours} removeTour={removeTour} />
       )}
